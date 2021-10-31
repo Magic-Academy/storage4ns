@@ -1,0 +1,59 @@
+{
+  "name": "storage4ns",
+  "version": "1.0.0",
+  "description": "Graceful storage solution with namespace.",
+  "repository": "git@github.com:tuanzisama/storage4ns.git",
+  "author": "tuanzisama <tuanzi@hatsunemiku.club>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "yarn run clean && cross-env NODE_ENV=development rollup -w -c scripts/rollup.config.dev.js",
+    "build": "yarn run clean && cross-env NODE_ENV=production rollup -c scripts/rollup.config.prod.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/runtime": "^7.16.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/lodash.forin": "^4.4.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "3.0.0",
+    "core-js": "2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.1.0",
+    "prettier": "1.9.1",
+    "prettier-eslint": "10.1.0",
+    "rollup": "^2.58.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^3.7.7",
+    "uglify-es": "^3.3.9"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "typings": "types/index.d.ts",
+  "main": "dist/storage4ns.cjs.js",
+  "module": "dist/storage4ns.esm.js",
+  "browser": "dist/storage4ns.esm.js",
+  "unpkg": "dist/storage4ns.js",
+  "jsdelivr": "dist/storage4ns.js",
+  "keywords": [
+    "storage",
+    "namespace storage"
+  ],
+  "bugs": {
+    "url": "https://github.com/tuanzisama/storage4ns/issues"
+  },
+  "homepage": "https://github.com/tuanzisama/storage4ns"
+}
